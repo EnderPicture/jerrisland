@@ -18,17 +18,4 @@ public class JournalItem : MonoBehaviour
     {
 
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.tag == "Player")
-        {
-            PlayerController pc = other.GetComponent<PlayerController>();
-            pc.JournalItemGain(this);
-            DieSequence();
-        }
-    }
-    void DieSequence()
-    {
-        Destroy(gameObject);
-    }
 }

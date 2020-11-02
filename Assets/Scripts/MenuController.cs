@@ -7,7 +7,7 @@ using DG.Tweening;
 public class MenuController : MonoBehaviour
 {
     public List<Transform> inventorySlots = new List<Transform>();
-    List<JournalItem> journalItems = new List<JournalItem>();
+    public List<JournalItem> journalItems = new List<JournalItem>();
     public Transform inventory;
     public Transform inventoryRoot;
     public TextMeshProUGUI selectedItemName;
@@ -45,10 +45,9 @@ public class MenuController : MonoBehaviour
     void UpdateSelect()
     {
         currentItem = journalItems.Find(d => d.index == viewingIndex);
-
         if (currentItem == null)
         {
-            selectedItemName.text = "not collected yet";
+            selectedItemName.text = "missing";
         }
         else
         {
@@ -69,7 +68,6 @@ public class MenuController : MonoBehaviour
         {
             if (item != null)
             {
-                Debug.Log(inventorySlots.Count);
                 Transform slot = inventorySlots[item.index];
                 TextMeshProUGUI text = slot.GetChild(0).GetComponent<TextMeshProUGUI>();
                 text.text = item.itemName;
@@ -80,5 +78,6 @@ public class MenuController : MonoBehaviour
     {
         journalItems.Add(item);
         UpdateMenu();
+        UpdateSelect();
     }
 }
