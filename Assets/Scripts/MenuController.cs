@@ -29,6 +29,8 @@ public class MenuController : MonoBehaviour
             }
 
         }
+        UpdateSelect();
+        UpdateMenu();
     }
 
     // Update is called once per frame
