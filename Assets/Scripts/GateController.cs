@@ -15,6 +15,8 @@ public class GateController : MonoBehaviour
     string passcode;
     bool passcodeCorrect = false;
 
+    public Animator gate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,11 @@ public class GateController : MonoBehaviour
     {
         if (powerInput.isPowered() && passcodeCorrect)
         {
-            Debug.Log("open door");
+            gate.SetBool("DoorOpen", true);
+        }
+        else
+        {
+            gate.SetBool("DoorOpen", false);
         }
     }
     public void buttonPressed(int id)
@@ -59,6 +65,7 @@ public class GateController : MonoBehaviour
             StartCoroutine(waitToReset());
         }
     }
+    // https://stackoverflow.com/questions/30056471/how-to-make-the-script-wait-sleep-in-a-simple-way-in-unity
     IEnumerator waitToReset()
     {
         yield return new WaitForSeconds(1);
