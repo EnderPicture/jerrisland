@@ -404,6 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e323d2d710263ba40bf867979d69f1fd, type: 3}
+--- !u!4 &1328515050 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3643226842822491720, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+  m_PrefabInstance: {fileID: 3643226841666664866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1405979795
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GateGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 5689709127207451603, guid: 5bdbf7f7757322f4d8045dc52f585653, type: 3}
+      propertyPath: masterPasscode
+      value: 1234
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bdbf7f7757322f4d8045dc52f585653, type: 3}
 --- !u!1001 &3643226841666664866
@@ -855,6 +864,14 @@ PrefabInstance:
       propertyPath: gravityGunRange
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3643226842045285865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1328515050}
+    - target: {fileID: 3643226842045285865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1328515050}
     - target: {fileID: 3643226842815649674, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
       propertyPath: m_UseHeadBob
       value: 0

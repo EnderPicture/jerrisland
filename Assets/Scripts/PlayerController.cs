@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public MenuController menuController;
     public float gravityGunRange;
     public Transform gravityGunHoldingSpot;
+    public Transform playerCamera;
     Transform ggHolding;
     FirstPersonController fpController;
     bool menuUp = false;
@@ -21,6 +22,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         inventoryToggle();
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GravityGun();
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Press();
+        }
         if (ggHolding != null)
         {
             ggHolding.GetComponent<Rigidbody>().AddForce(10 * (gravityGunHoldingSpot.position - ggHolding.position));
@@ -44,10 +53,6 @@ public class PlayerController : MonoBehaviour
                 Cursor.visible = false;
             }
         }
-        if (Input.GetButtonDown("Fire1"))
-        {
-            GravityGun();
-        }
     }
     void GravityGun()
     {
@@ -56,7 +61,7 @@ public class PlayerController : MonoBehaviour
         {
             int layerMask = ~(1 << LayerMask.NameToLayer("Player"));
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, gravityGunRange, layerMask))
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, gravityGunRange, layerMask))
             {
                 if (hit.transform.tag == "Holdable")
                 {
@@ -88,5 +93,18 @@ public class PlayerController : MonoBehaviour
     public void JournalItemGain(JournalItem journalItem)
     {
         menuController.GainJournalItem(journalItem);
+    }
+    void Press()
+    {
+        int layerMask = ~(1 << LayerMask.NameToLayer("Player"));
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, gravityGunRange, layerMask))
+        {
+            if (hit.transform.tag == "GateButton")
+            {
+                GateButton button = hit.transform.parent.GetComponent<GateButton>();
+                button.pressDown();
+            }
+        }
     }
 }

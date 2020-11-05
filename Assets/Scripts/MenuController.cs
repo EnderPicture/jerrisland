@@ -29,8 +29,8 @@ public class MenuController : MonoBehaviour
             }
 
         }
-        UpdateSelect();
-        UpdateMenu();
+        updateSelect();
+        updateMenu();
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class MenuController : MonoBehaviour
     {
         GetComponent<Canvas>().enabled = show;
     }
-    void UpdateSelect()
+    void updateSelect()
     {
         currentItem = journalItems.Find(d => d.index == viewingIndex);
         if (currentItem == null)
@@ -60,9 +60,9 @@ public class MenuController : MonoBehaviour
         viewingIndex += delta;
         viewingIndex = viewingIndex > inventorySlots.Count - 1 ? 0 : viewingIndex;
         viewingIndex = viewingIndex < 0 ? inventorySlots.Count - 1 : viewingIndex;
-        UpdateSelect();
+        updateSelect();
     }
-    void UpdateMenu()
+    void updateMenu()
     {
         foreach (JournalItem item in journalItems)
         {
@@ -77,7 +77,7 @@ public class MenuController : MonoBehaviour
     public void GainJournalItem(JournalItem item)
     {
         journalItems.Add(item);
-        UpdateMenu();
-        UpdateSelect();
+        updateMenu();
+        updateSelect();
     }
 }
