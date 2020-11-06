@@ -460,3 +460,4 @@ MonoBehaviour:
   menuController: {fileID: 0}
   gravityGunRange: 0
   gravityGunHoldingSpot: {fileID: 1784738308}
+  playerCamera: {fileID: 3643226842822491720}
