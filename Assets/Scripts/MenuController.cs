@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MenuController : MonoBehaviour
     public Transform inventory;
     public Transform inventoryRoot;
     public TextMeshProUGUI selectedItemName;
+    public Image pageRender;
     int viewingIndex = 0;
     JournalItem currentItem;
     public GameObject selectBG;
@@ -48,10 +50,14 @@ public class MenuController : MonoBehaviour
         if (currentItem == null)
         {
             selectedItemName.text = "missing";
+            pageRender.sprite = null;
+            pageRender.color = new Color(0,0,0,0);
         }
         else
         {
             selectedItemName.text = currentItem.itemName;
+            pageRender.sprite = currentItem.journalPage;
+            pageRender.color = new Color(255,255,255,255);
         }
         selectBG.transform.DOMove(inventorySlots[viewingIndex].transform.position, 0.2f).SetEase(Ease.InOutQuint);
     }
@@ -70,6 +76,9 @@ public class MenuController : MonoBehaviour
             {
                 Transform slot = inventorySlots[item.index];
                 TextMeshProUGUI text = slot.GetChild(0).GetComponent<TextMeshProUGUI>();
+                Image image = slot.GetComponent<Image>();
+                image.sprite = item.icon;
+                
                 text.text = item.itemName;
             }
         }
