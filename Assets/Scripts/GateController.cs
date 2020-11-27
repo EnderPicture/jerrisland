@@ -17,6 +17,16 @@ public class GateController : MonoBehaviour
 
     public Animator gate;
 
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //sounds
+
+    public GameObject openSound;
+    
+
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +56,7 @@ public class GateController : MonoBehaviour
         if (powerInput.isPowered() && passcodeCorrect)
         {
             gate.SetBool("DoorOpen", true);
+            
         }
         else
         {
@@ -58,6 +69,7 @@ public class GateController : MonoBehaviour
         if (passcode == masterPasscode)
         {
             passcodeCorrect = true;
+            Instantiate(openSound);
         }
         if (!passcodeCorrect && passcode.Length >= masterPasscode.Length)
         {

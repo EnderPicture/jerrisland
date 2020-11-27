@@ -6,6 +6,14 @@ public class GatePowerInput : MonoBehaviour
 {
     int gateID = 0;
     bool gatePowered = false;
+
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //sound
+    public GameObject gatePoweredSound;
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +34,7 @@ public class GatePowerInput : MonoBehaviour
         if (gatePowerSource != null && gatePowerSource.getGateId() == gateID)
         {
             gatePowered = true;
+            Instantiate(gatePoweredSound); //currently does not delete itself when removed and stacks, need help with that
         }
     }
     private void OnTriggerExit(Collider other)
@@ -35,6 +44,7 @@ public class GatePowerInput : MonoBehaviour
         if (gatePowerSource != null && gatePowerSource.getGateId() == gateID)
         {
             gatePowered = false;
+           
         }
     }
     public bool isPowered()

@@ -16,6 +16,18 @@ public class MenuController : MonoBehaviour
     int viewingIndex = 0;
     JournalItem currentItem;
     public GameObject selectBG;
+
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //sounds
+
+    public GameObject journalPickupSound;
+    public GameObject interactSound;
+
+
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,21 +55,28 @@ public class MenuController : MonoBehaviour
     public void show(bool show)
     {
         GetComponent<Canvas>().enabled = show;
+        //open and close menu
     }
     void updateSelect()
     {
+
+        //add click sound here
+
         currentItem = journalItems.Find(d => d.index == viewingIndex);
         if (currentItem == null)
         {
             selectedItemName.text = "missing";
             pageRender.sprite = null;
             pageRender.color = new Color(0,0,0,0);
+
         }
         else
         {
             selectedItemName.text = currentItem.itemName;
             pageRender.sprite = currentItem.journalPage;
             pageRender.color = new Color(255,255,255,255);
+
+            
         }
         selectBG.transform.DOMove(inventorySlots[viewingIndex].transform.position, 0.2f).SetEase(Ease.InOutQuint);
     }
@@ -67,6 +86,8 @@ public class MenuController : MonoBehaviour
         viewingIndex = viewingIndex > inventorySlots.Count - 1 ? 0 : viewingIndex;
         viewingIndex = viewingIndex < 0 ? inventorySlots.Count - 1 : viewingIndex;
         updateSelect();
+
+        
     }
     void updateMenu()
     {
@@ -86,6 +107,7 @@ public class MenuController : MonoBehaviour
     public void GainJournalItem(JournalItem item)
     {
         journalItems.Add(item);
+        Instantiate(journalPickupSound); //sound effect
         updateMenu();
         updateSelect();
     }
