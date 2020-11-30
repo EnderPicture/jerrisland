@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: itemName
       value: Item10
       objectReference: {fileID: 0}
+    - target: {fileID: 3474419295571886084, guid: 3a7db2879d63bb24ba3d03529c3c629d, type: 3}
+      propertyPath: journalPage
+      value: 
+      objectReference: {fileID: 21300000, guid: ff570c6fc1d266345a083b388cb60e08, type: 3}
+    - target: {fileID: 3474419295571886084, guid: 3a7db2879d63bb24ba3d03529c3c629d, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 713ba22b0fca40f4ca5858317db92606, type: 3}
     - target: {fileID: 3474419295571886087, guid: 3a7db2879d63bb24ba3d03529c3c629d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
