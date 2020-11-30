@@ -33,6 +33,7 @@ public class MenuController : MonoBehaviour
     {
         DOTween.Init();
         // get all the slots from the inventory
+        int index = 0;
         for (int c = 0; c < inventory.childCount; c++)
         {
             Transform child = inventory.GetChild(c);
@@ -40,6 +41,9 @@ public class MenuController : MonoBehaviour
             {
                 Transform slot = child.GetChild(j);
                 inventorySlots.Add(slot);
+                slot.GetComponent<InvSlot>().controller = this;
+                slot.GetComponent<InvSlot>().index = index;
+                index++;
             }
 
         }
@@ -51,6 +55,11 @@ public class MenuController : MonoBehaviour
     void Update()
     {
 
+    }
+    public void click(int index)
+    {
+        viewingIndex = index;
+        updateSelect();
     }
     public void show(bool show)
     {
@@ -67,16 +76,16 @@ public class MenuController : MonoBehaviour
         {
             selectedItemName.text = "missing";
             pageRender.sprite = null;
-            pageRender.color = new Color(0,0,0,0);
+            pageRender.color = new Color(0, 0, 0, 0);
 
         }
         else
         {
             selectedItemName.text = currentItem.itemName;
             pageRender.sprite = currentItem.journalPage;
-            pageRender.color = new Color(255,255,255,255);
+            pageRender.color = new Color(255, 255, 255, 255);
 
-            
+
         }
         selectBG.transform.DOMove(inventorySlots[viewingIndex].transform.position, 0.2f).SetEase(Ease.InOutQuint);
     }
@@ -87,7 +96,7 @@ public class MenuController : MonoBehaviour
         viewingIndex = viewingIndex < 0 ? inventorySlots.Count - 1 : viewingIndex;
         updateSelect();
 
-        
+
     }
     void updateMenu()
     {
@@ -99,7 +108,7 @@ public class MenuController : MonoBehaviour
                 TextMeshProUGUI text = slot.GetChild(0).GetComponent<TextMeshProUGUI>();
                 Image image = slot.GetComponent<Image>();
                 image.sprite = item.icon;
-                
+
                 text.text = item.itemName;
             }
         }
