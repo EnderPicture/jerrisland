@@ -44,6 +44,7 @@ public class GateButton : MonoBehaviour
         if (!buttonDown)
         {
             gateRoot.transform.DOLocalMove(new Vector3(-.5f, 0, 0), .2f).SetEase(Ease.InOutQuint);
+            buttonDown = true;
             gateController.buttonPressed(buttonID);
             Instantiate(pressSound);
         }
