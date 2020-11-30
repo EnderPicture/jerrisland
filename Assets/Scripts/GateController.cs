@@ -9,13 +9,28 @@ public class GateController : MonoBehaviour
     public GateButton button2;
     public GateButton button3;
     public GateButton button4;
+    public GateButton button5;
+    public GateButton button6;
     public GatePowerInput powerInput;
     public GatePowerSource powerSource;
     public string masterPasscode;
     string passcode;
     bool passcodeCorrect = false;
 
+    bool doorOpen = false;
+    bool lastDoorOpen = false;
+
     public Animator gate;
+
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //sounds
+
+    public GameObject openSound;
+
+
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +51,14 @@ public class GateController : MonoBehaviour
         button4.setButtonID(4);
         button4.gateController = this;
 
+        button5.setGateID(gateID);
+        button5.setButtonID(5);
+        button5.gateController = this;
+
+        button6.setGateID(gateID);
+        button6.setButtonID(6);
+        button6.gateController = this;
+
         powerInput.setGateID(gateID);
         powerSource.setGateID(gateID);
     }
@@ -43,18 +66,20 @@ public class GateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (powerInput.isPowered() && passcodeCorrect)
+        doorOpen = powerInput.isPowered() && passcodeCorrect;
+        gate.SetBool("DoorOpen", doorOpen);
+
+        if (!lastDoorOpen && doorOpen)
         {
-            gate.SetBool("DoorOpen", true);
+            Instantiate(openSound);
         }
-        else
-        {
-            gate.SetBool("DoorOpen", false);
-        }
+
+        lastDoorOpen = doorOpen;
     }
     public void buttonPressed(int id)
     {
         passcode += id + "";
+        Debug.Log(passcode);
         if (passcode == masterPasscode)
         {
             passcodeCorrect = true;
@@ -73,5 +98,7 @@ public class GateController : MonoBehaviour
         button2.reset();
         button3.reset();
         button4.reset();
+        button5.reset();
+        button6.reset();
     }
 }

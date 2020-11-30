@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gateRoot: {fileID: 2717766265202019074}
   gateController: {fileID: 0}
+  pressSound: {fileID: 3631695456274099052, guid: f2243f7dde17dfa4fb14afdd2d257eb2, type: 3}
 --- !u!1 &7765118010344505317
 GameObject:
   m_ObjectHideFlags: 0

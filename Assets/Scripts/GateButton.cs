@@ -10,6 +10,16 @@ public class GateButton : MonoBehaviour
     public Transform gateRoot;
     bool buttonDown = false;
     public GateController gateController;
+
+
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //sound
+    public GameObject pressSound;
+    
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,12 +44,15 @@ public class GateButton : MonoBehaviour
         if (!buttonDown)
         {
             gateRoot.transform.DOLocalMove(new Vector3(-.5f, 0, 0), .2f).SetEase(Ease.InOutQuint);
+            buttonDown = true;
             gateController.buttonPressed(buttonID);
+            Instantiate(pressSound);
         }
     }
     public void reset()
     {
         buttonDown = false;
         gateRoot.transform.DOLocalMove(new Vector3(0, 0, 0), .2f).SetEase(Ease.InOutQuint);
+   
     }
 }
