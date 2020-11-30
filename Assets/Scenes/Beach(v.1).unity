@@ -2636,7 +2636,7 @@ GameObject:
   - component: {fileID: 576120500}
   - component: {fileID: 576120499}
   - component: {fileID: 576120498}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6266,22 +6266,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1965472661, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: m_Name
+      value: NormalCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 3643226842045285865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
       propertyPath: menuController
       value: 
       objectReference: {fileID: 739538745}
-    - target: {fileID: 3643226842815649674, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
-      propertyPath: m_HeadBob.HorizontalBobRange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3643226842815649674, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
-      propertyPath: m_HeadBob.VerticalBobRange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3643226842815649674, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
-      propertyPath: m_UseHeadBob
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3643226842822491722, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
       propertyPath: m_LocalPosition.x
       value: -106.05
