@@ -6,7 +6,7 @@ OcclusionCullingSettings:
   serializedVersion: 2
   m_OcclusionBakeSettings:
     smallestOccluder: 1
-    smallestHole: 1
+    smallestHole: 0.05
     backfaceThreshold: 100
   m_SceneGUID: 0f9bc82f8bb5321478faea21c8cce2da
   m_OcclusionCullingData: {fileID: 36300000, guid: 25ad3ba6918bb92499323de168791d93, type: 2}
@@ -6745,6 +6745,14 @@ PrefabInstance:
       propertyPath: menuController
       value: 
       objectReference: {fileID: 739538745}
+    - target: {fileID: 3643226842820943946, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643226842822491720, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.468
+      objectReference: {fileID: 0}
     - target: {fileID: 3643226842822491722, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
       propertyPath: m_LocalPosition.x
       value: -106.05
