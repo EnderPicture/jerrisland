@@ -59,9 +59,13 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1187812204568146730, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
+      propertyPath: m_Volume
+      value: 0.637
+      objectReference: {fileID: 0}
     - target: {fileID: 5766798196428443138, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
       propertyPath: m_Name
-      value: journalPickupSound
+      value: journalPickupSound Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5766798196428443138, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
       propertyPath: m_IsActive
