@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7089114007392822638
+--- !u!1001 &1217600495702991584
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -54,14 +54,14 @@ PrefabInstance:
     - target: {fileID: 1187812204568146730, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 8dcfe2be4df1f7f4994ddf2b7bae2387, type: 3}
+      objectReference: {fileID: 8300000, guid: 580cf867d825e4f409d9d6bd41b6cd22, type: 3}
     - target: {fileID: 1187812204568146730, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
       propertyPath: m_Volume
-      value: 0.314
+      value: 0.225
       objectReference: {fileID: 0}
     - target: {fileID: 5766798196428443138, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
       propertyPath: m_Name
-      value: buttonPressSound Variant
+      value: failSound Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
