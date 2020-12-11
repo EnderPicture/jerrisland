@@ -7,6 +7,14 @@ using UnityEngine.SceneManagement;
 public class IntroGUI : MonoBehaviour
 {
     public CanvasGroup canvasGroupText;
+
+
+    public GameObject interactSound;
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +24,7 @@ public class IntroGUI : MonoBehaviour
     void enableInteraction()
     {
         canvasGroupText.interactable = true;
+        
     }
 
     // Update is called once per frame
@@ -27,6 +36,7 @@ public class IntroGUI : MonoBehaviour
     public void startGame()
     {
         canvasGroupText.DOFade(0, 1).OnComplete(loadGameScene);
+        Instantiate(interactSound);
     }
     void loadGameScene()
     {

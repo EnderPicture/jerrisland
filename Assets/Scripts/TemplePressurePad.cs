@@ -5,6 +5,8 @@ using UnityEngine;
 public class TemplePressurePad : MonoBehaviour
 {
     bool down = false;
+
+    public GameObject poweredSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class TemplePressurePad : MonoBehaviour
         TemplePowerPack power = other.gameObject.GetComponent<TemplePowerPack>();
         if (power != null) {
             down = true;
+            Instantiate(poweredSound);
         }
     }
     private void OnTriggerExit(Collider other) {
