@@ -57,11 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 09c4c352ae66a604a87e13fa30b914aa, type: 3}
     - target: {fileID: 1187812204568146730, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187812204568146730, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
+      propertyPath: m_Pitch
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 5766798196428443138, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
       propertyPath: m_Name
-      value: menuOpenSound
+      value: menuOpenSound Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee8b1ad8e509564ebd7873ac494fcdd, type: 3}
