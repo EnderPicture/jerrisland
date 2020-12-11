@@ -1317,14 +1317,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 993226790}
     m_Modifications:
-    - target: {fileID: 7404438944997057197, guid: 3bec7edf95ab3594582f016730204208, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7404438944997057197, guid: 3bec7edf95ab3594582f016730204208, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7404438944997057198, guid: 3bec7edf95ab3594582f016730204208, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1409,18 +1401,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7404438944997057199, guid: 3bec7edf95ab3594582f016730204208, type: 3}
-      propertyPath: journalPickupSound
-      value: 
-      objectReference: {fileID: 5703478461680675256, guid: a5ae6b534a37cac4e81b1d97570d63ba, type: 3}
-    - target: {fileID: 7404438944997057199, guid: 3bec7edf95ab3594582f016730204208, type: 3}
-      propertyPath: interactSound
-      value: 
-      objectReference: {fileID: 4338639455746264259, guid: fc844ef6101f0744193226ff471c6beb, type: 3}
-    - target: {fileID: 7404438944997057199, guid: 3bec7edf95ab3594582f016730204208, type: 3}
-      propertyPath: menuOpenSound
-      value: 
-      objectReference: {fileID: 2452376789507949268, guid: 5c61a5ada19c17c4d9a0adca3d0d3b97, type: 3}
     - target: {fileID: 7404438944997057202, guid: 3bec7edf95ab3594582f016730204208, type: 3}
       propertyPath: m_Name
       value: MenuSystem
