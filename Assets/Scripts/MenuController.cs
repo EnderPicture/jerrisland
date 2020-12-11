@@ -23,7 +23,7 @@ public class MenuController : MonoBehaviour
 
     public GameObject journalPickupSound;
     public GameObject interactSound;
-
+    public GameObject menuOpenSound;
 
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,16 +60,19 @@ public class MenuController : MonoBehaviour
     {
         viewingIndex = index;
         updateSelect();
+        //add click sound here
+        Instantiate(interactSound);
     }
     public void show(bool show)
     {
         GetComponent<Canvas>().enabled = show;
         //open and close menu
+        Instantiate(menuOpenSound);
     }
     void updateSelect()
     {
 
-        //add click sound here
+       
 
         currentItem = journalItems.Find(d => d.index == viewingIndex);
         if (currentItem == null)
@@ -96,6 +99,8 @@ public class MenuController : MonoBehaviour
         viewingIndex = viewingIndex < 0 ? inventorySlots.Count - 1 : viewingIndex;
         updateSelect();
 
+        //add click sound here
+        Instantiate(interactSound);
 
     }
     void updateMenu()

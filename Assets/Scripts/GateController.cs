@@ -27,7 +27,7 @@ public class GateController : MonoBehaviour
     //sounds
 
     public GameObject openSound;
-
+    public GameObject soundFail;
 
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,5 +100,7 @@ public class GateController : MonoBehaviour
         button4.reset();
         button5.reset();
         button6.reset();
+
+        Instantiate(soundFail);
     }
 }
