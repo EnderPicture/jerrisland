@@ -19,12 +19,13 @@ public class IntroGUI : MonoBehaviour
     void Start()
     {
         canvasGroupText.DOFade(1, 1).SetDelay(2).OnStart(enableInteraction);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void enableInteraction()
     {
         canvasGroupText.interactable = true;
-        
     }
 
     // Update is called once per frame

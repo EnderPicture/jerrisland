@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
+
 public class FadeImage : MonoBehaviour
 {
     public Image image;
@@ -16,5 +18,13 @@ public class FadeImage : MonoBehaviour
     void Update()
     {
 
+    }
+    public void endGame()
+    {
+        image.DOFade(1, 1).OnComplete(changeScene);
+    }
+    void changeScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
