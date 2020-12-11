@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         inventoryToggle();
         instructionsToggle();
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !menuUp && !instructionsUp)
         {
             GravityGun();
         }
