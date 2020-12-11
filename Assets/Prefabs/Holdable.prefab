@@ -177,6 +177,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4450305606928694953, guid: fc5b2f35bbc6a2246b606355a9536421, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca66319911c61ca4f94b7c3303a1517d, type: 2}
+    - target: {fileID: 781522782454889434, guid: fc5b2f35bbc6a2246b606355a9536421, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b22283aa89829344afdd192e27b4900, type: 2}
     - target: {fileID: 919132149155446097, guid: fc5b2f35bbc6a2246b606355a9536421, type: 3}
       propertyPath: m_Name
       value: power_pack

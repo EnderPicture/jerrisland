@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, gravityGunRange, layerMask))
             {
+                Debug.Log(hit.transform.tag);
                 if (hit.transform.tag == "Holdable")
                 {
                     ggHolding = hit.transform;
