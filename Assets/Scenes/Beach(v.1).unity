@@ -6,7 +6,7 @@ OcclusionCullingSettings:
   serializedVersion: 2
   m_OcclusionBakeSettings:
     smallestOccluder: 1
-    smallestHole: 1
+    smallestHole: 0.1
     backfaceThreshold: 100
   m_SceneGUID: 0f9bc82f8bb5321478faea21c8cce2da
   m_OcclusionCullingData: {fileID: 36300000, guid: 25ad3ba6918bb92499323de168791d93, type: 2}
@@ -795,15 +795,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5476920792259345733, guid: 0d07351a6f342e843b7c3abd3215a13d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0739093
+      value: -6.98
       objectReference: {fileID: 0}
     - target: {fileID: 5476920792259345733, guid: 0d07351a6f342e843b7c3abd3215a13d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.532131
+      value: 23.27
       objectReference: {fileID: 0}
     - target: {fileID: 5476920792259345733, guid: 0d07351a6f342e843b7c3abd3215a13d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.958201
+      value: 9.64
       objectReference: {fileID: 0}
     - target: {fileID: 5476920792259345733, guid: 0d07351a6f342e843b7c3abd3215a13d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -15456,6 +15456,10 @@ PrefabInstance:
     - target: {fileID: 6779631319837334768, guid: 6d4a03e5eb7b63c4691ecd3c9981ece2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780455203517770087, guid: 6d4a03e5eb7b63c4691ecd3c9981ece2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6821553386446638495, guid: 6d4a03e5eb7b63c4691ecd3c9981ece2, type: 3}
       propertyPath: m_StaticEditorFlags
