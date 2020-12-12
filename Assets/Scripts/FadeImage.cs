@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class FadeImage : MonoBehaviour
 {
     public Image image;
+    public GameObject endSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,8 @@ public class FadeImage : MonoBehaviour
     }
     public void endGame()
     {
-        image.DOFade(1, 1).OnComplete(changeScene);
+        image.DOFade(1, 2).OnComplete(changeScene);
+        Instantiate(endSound);
     }
     void changeScene()
     {
