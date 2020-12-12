@@ -2675,6 +2675,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: NormalCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3643226841750902865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: m_StopNaN
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643226841750902865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643226841750902865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: m_Antialiasing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643226841750902865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
+      propertyPath: m_Dithering
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3643226842045285865, guid: e4e856eea70ecd44891ece690eb89499, type: 3}
       propertyPath: menuController
       value: 
@@ -9712,6 +9728,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6780455203517770087, guid: 6d4a03e5eb7b63c4691ecd3c9981ece2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83b578523df4e3e4486afe2a562f9d43, type: 2}
     - target: {fileID: 6821553386446638495, guid: 6d4a03e5eb7b63c4691ecd3c9981ece2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
