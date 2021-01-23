@@ -1,4 +1,4 @@
-# jerrisland
+# Paradyso
 ## play it online here
 [paradyso.surge.sh](paradyso.surge.sh)
 ## releases
